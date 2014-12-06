@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">株のﾃｸﾆｶﾙ分析支援ｱﾌﾟﾘ</string>
     <string name="hello_world">※当アプリでは、当日の株価（20分遅れ）を含めた、過去50日間の終値データを用いています。\n※当日の株価は、5分間隔で取得しています。</string>
-    <string name="button1">アラート１</string>  
-    <string name="button2">アラート２</string>       
-    <string name="button3">アラート３</string> 
-    <string name="button4">アラート４</string>     
-    <string name="button5">アラート５</string>     
+    <string name="button1">アラート１</string>
+    <string name="button2">アラート２</string>
+    <string name="button3">アラート３</string>
+    <string name="button4">アラート４</string>
+    <string name="button5">アラート５</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_second">SecondActivity</string>
 
-    
 </resources>
