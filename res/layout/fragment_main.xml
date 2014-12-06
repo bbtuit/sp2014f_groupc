@@ -63,8 +63,7 @@
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button1"
-            android:layout_alignBottom="@+id/button1"
+	 	    android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textOff="OFF"
             android:textOn="ON" />
@@ -84,8 +83,7 @@
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button2"
-            android:layout_alignBottom="@+id/button2"
+	 	    android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textOff="OFF"
             android:textOn="ON" />
@@ -105,8 +103,7 @@
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button3"
-            android:layout_alignBottom="@+id/button3"
+	 	    android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textOff="OFF"
             android:textOn="ON" />
