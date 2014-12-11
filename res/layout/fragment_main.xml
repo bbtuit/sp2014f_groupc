@@ -8,7 +8,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:text="@string/hello_world" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world2" />
  
     <RelativeLayout
     	android:orientation="horizontal"
@@ -17,7 +24,9 @@
 	 	<Button 
 	        android:layout_height="wrap_content" 
 	        android:layout_width="wrap_content" 
-	        android:text="@string/button1"/>
+	        android:text="@string/button1"
+	        android:id="@+id/btn_1"/>
+	        
 
 	 	<Switch
 	 	    android:layout_width="wrap_content"
@@ -37,8 +46,8 @@
  		<Button 
         	android:layout_height="wrap_content" 
        		android:layout_width="wrap_content" 
-        	android:text="@string/button2"/>
-
+        	android:text="@string/button2"
+        	android:id="@+id/btn_2"/>
  		<Switch
  		    android:layout_width="wrap_content"
  		    android:layout_height="wrap_content"
@@ -48,23 +57,22 @@
  		    android:textOn="ON" />
 
 	</RelativeLayout>
-	
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button3" />
-
+            android:text="@string/button3"
+        	android:id="@+id/btn_3"/>
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-	 	    android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:textOff="OFF"
             android:textOn="ON" />
     </RelativeLayout>
@@ -75,11 +83,10 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button4" />
-
+            android:text="@string/button4" 
+        	android:id="@+id/btn_4"/>            
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,10 +102,10 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button5" />
+            android:text="@string/button5" 
+			android:id="@+id/btn_5"/>
 
         <Switch
             android:layout_width="wrap_content"

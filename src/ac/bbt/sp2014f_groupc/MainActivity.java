@@ -1,15 +1,20 @@
 package ac.bbt.sp2014f_groupc;
 
+
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
 
 
 
@@ -19,6 +24,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+    //    public void onclick(view v)
+        
+        
+        
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragment())
@@ -58,7 +69,47 @@ public class MainActivity extends Activity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
+
+            
+            // アラート1ボタンのクリックリスナー定義
+            Button button1 = (Button)rootView.findViewById(R.id.btn_1);
+            button1.setTag("btn1");
+            button1.setOnClickListener(new ButtonClickListener());
+            
+            // アラート2ボタンのクリックリスナー定義
+            Button button2 = (Button)rootView.findViewById(R.id.btn_2);
+            button2.setTag("btn2");
+            button2.setOnClickListener(new ButtonClickListener());
+            
+            // アラート3ボタンのクリックリスナー定義
+            Button button3= (Button)rootView.findViewById(R.id.btn_3);
+            button3.setTag("btn3");
+            button3.setOnClickListener(new ButtonClickListener());
+       
+            // アラート4ボタンのクリックリスナー定義
+            Button button4 = (Button)rootView.findViewById(R.id.btn_4);
+            button4.setTag("btn4");
+            button4.setOnClickListener(new ButtonClickListener());
+            
+            // アラート5ボタンのクリックリスナー定義
+            Button button5 = (Button)rootView.findViewById(R.id.btn_5);
+            button5.setTag("btn5");
+            button5.setOnClickListener(new ButtonClickListener());
+            
+            return rootView;    
         }
+        
+        // クリックリスナー定義
+     	class ButtonClickListener implements OnClickListener {
+     		// onClickメソッド(ボタンクリック時イベントハンドラ)
+     		public void onClick(View v) {
+     			//　インテントの生成（呼び出すクラスの指定）
+     			Intent intent = new Intent(getActivity(),SecondActivity.class);
+     			startActivity(intent);
+     			
+     		}
+     	}
+     
+        
     }
 }
