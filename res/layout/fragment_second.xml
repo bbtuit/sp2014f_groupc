@@ -1,0 +1,111 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/hello_world" />
+    
+
+	
+	<EditText
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/alart" 
+		 android:hint="@string/hint_name"
+		 android:textSize="15sp"
+		 android:inputType="text"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/tx1" />
+ 	
+ 	
+    <RelativeLayout
+    	android:orientation="horizontal"
+    	android:layout_height="wrap_content"
+    	android:layout_width="match_parent">
+ 		<Button 
+        	android:layout_height="wrap_content" 
+       		android:layout_width="wrap_content" 
+        	android:text="@string/button2"/>
+
+ 		<Switch
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_alignParentRight="true"
+ 		    android:layout_centerVertical="true"
+ 		    android:textOff="OFF"
+ 		    android:textOn="ON" />
+
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button3" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOff="OFF"
+            android:textOn="ON" />
+    </RelativeLayout>
+        	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button4" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	 	    android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textOff="OFF"
+            android:textOn="ON" />
+    </RelativeLayout>
+ 	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button5" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	 	    android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textOff="OFF"
+            android:textOn="ON" />
+    </RelativeLayout>
+
+</LinearLayout>
