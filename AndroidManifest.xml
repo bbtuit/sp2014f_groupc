@@ -26,6 +26,14 @@
             android:name=".SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity
+            android:name=".BoribanActivity"
+            android:label="@string/title_activity_boriban" >
+        </activity>
+        <activity
+            android:name=".RSIActivity"
+            android:label="@string/title_activity_rsi" >
+        </activity>
     </application>
 
 </manifest>

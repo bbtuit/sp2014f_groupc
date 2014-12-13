@@ -11,15 +11,28 @@
         android:textSize="20sp"
         android:text="@string/hello_world" />
     
-
+	<LinearLayout
+	    android:orientation="horizontal" 
+	    android:layout_height="wrap_content" 
+	    android:layout_width="wrap_content" 
+	    android:layout_gravity="left"
+	    android:layout_marginTop="10dp">
 	
-	<EditText
-		 android:layout_width="wrap_content"
-		 android:layout_height="wrap_content"
-		 android:id="@+id/alart" 
-		 android:hint="@string/hint_name"
-		 android:textSize="15sp"
-		 android:inputType="text"/>
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="15sp"
+	        android:text="@string/button1" />
+		<EditText
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:id="@+id/alart" 
+			 android:hint="@string/hint_name"
+			 android:textSize="15sp"
+			 android:inputType="text"/>
+		
+	</LinearLayout>
+		
 
 
     <TextView
@@ -28,84 +41,128 @@
         android:textSize="15sp"
         android:text="@string/tx1" />
  	
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+	 	<Spinner
+	 	    android:layout_height="wrap_content"
+	 	    android:layout_width="wrap_content"
+	 	    android:layout_marginLeft="5dp"  
+	 	    android:entries="@array/sect_list" />
+	 	
+		<EditText
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:id="@+id/code" 
+			 android:hint="@string/sect_c"
+			 android:textSize="15sp"
+             android:layout_alignParentRight="true"			 
+			 android:inputType="number"/>
+	 	
+    </RelativeLayout>
+    
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/sect_d" />
  	
+    <Button
+        android:id="@+id/sect_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:text="@string/sect_e" />
+
+    <Button
+        android:id="@+id/sect_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:text="@string/sect_f" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/sect_g" /> 
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+		
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="15sp"
+			android:layout_alignParentRight="true"
+	        android:text="@string/sect_j" />
+	</RelativeLayout>
+           
     <RelativeLayout
     	android:orientation="horizontal"
     	android:layout_height="wrap_content"
     	android:layout_width="match_parent">
- 		<Button 
-        	android:layout_height="wrap_content" 
-       		android:layout_width="wrap_content" 
-        	android:text="@string/button2"/>
-
- 		<Switch
- 		    android:layout_width="wrap_content"
- 		    android:layout_height="wrap_content"
- 		    android:layout_alignParentRight="true"
- 		    android:layout_centerVertical="true"
- 		    android:textOff="OFF"
- 		    android:textOn="ON" />
-
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="15sp"
+			android:layout_marginLeft="15dp"
+	        android:text="@string/sect_h" />
+	    <Switch
+	 	    android:layout_width="wrap_content"
+	 	    android:layout_height="wrap_content"
+	 	    android:layout_alignParentRight="true"
+	 	    android:layout_centerVertical="true"
+	 	    android:textOff="OFF"
+	 	    android:textOn="ON" />
 	</RelativeLayout>
-
+	
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button3" />
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textOff="OFF"
-            android:textOn="ON" />
-    </RelativeLayout>
-        	
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button4" />
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:layout_height="wrap_content"
+    	android:layout_width="match_parent">
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="15sp"
+			android:layout_marginLeft="15dp"
+	        android:text="@string/sect_i" />
+	    <Switch
+	 	    android:layout_width="wrap_content"
+	 	    android:layout_height="wrap_content"
+	 	    android:layout_alignParentRight="true"
 	 	    android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:textOff="OFF"
-            android:textOn="ON" />
-    </RelativeLayout>
- 	
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button5" />
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-	 	    android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:textOff="OFF"
-            android:textOn="ON" />
-    </RelativeLayout>
+	 	    android:textOff="OFF"
+	 	    android:textOn="ON" />
+	</RelativeLayout>
+	
+	<LinearLayout
+	    android:orientation="horizontal" 
+	    android:layout_height="wrap_content" 
+	    android:layout_width="wrap_content" 
+	    android:layout_gravity="center_horizontal" 
+	    android:layout_marginTop="10dp">
+		<Button 
+		    android:layout_height="wrap_content" 
+		    android:layout_width="120dp" 
+		    android:text="@string/bt_can" 
+		    android:id="@+id/bt_can"/>
+		<Button 
+		    android:layout_height="wrap_content" 
+		    android:layout_width="120dp" 
+		    android:text="@string/bt_set" 
+		    android:id="@+id/bt_set"/>     
+	        
+        
+    </LinearLayout>
+	
+    
 
 </LinearLayout>

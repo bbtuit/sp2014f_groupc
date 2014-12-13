@@ -2,18 +2,79 @@
 <resources>
 
     <string name="app_name">株のﾃｸﾆｶﾙ分析支援ｱﾌﾟﾘ</string>
-    <string name="hello_world">指標目標値到達アラート</string>    
+    <string name="hello_world">指標目標値到達アラート</string>
     <string name="hello_world2">※当アプリでは、当日の株価（20分遅れ）\n　を含めた過去50日間の終値データを\n　用いています。\n※当日の株価は、5分間隔で取得しています。</string>
     <string name="button1">アラート１</string>
     <string name="button2">アラート２</string>
     <string name="button3">アラート３</string>
     <string name="button4">アラート４</string>
     <string name="button5">アラート５</string>
-    <string name="button">テストてすとテスト</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_second">個別アラート設定トップ</string>
     <string name="hint_name">任意のアラート名称を付けてください</string>
     <string name="tx1">１.日経平均　若しくは\n　　銘柄コードを入力してください</string>
 
+    <string-array name="sect_list">
+        <item>日経平均</item>
+        <item>その他銘柄コード</item>
+    </string-array>
+
+    <string name="sect_c">入力欄</string>
+    <string name="sect_d">２.指標を選んでください</string>
+    <string name="sect_e">ボリンジャーバンド：〇日、〇〇以上</string>
+    <string name="sect_f">ＲＳＩ：◇日、◇◇以上</string>
+    <string name="sect_g">３.アラート条件を選んでください</string>
+    <string name="sect_h">ボリンジャーバンド</string>
+    <string name="sect_i">ＲＳＩ</string>
+    <string name="sect_j">シグナル</string>
+    <string name="bori_a">ボリンジャーバンド　設定画面</string>
+    <string name="bori_b">１.計算期間</string>
+    <string name="bori_d">２.トリガー条件</string>
+    <string name="bori_e">現在株価（２０分遅れ）が</string>
+    <string name="bori_f">で、シグナル「有」判定</string>
+
+    <string-array name="bori_day">
+        <item>２０日</item>
+        <item>２５日</item>
+        <item>３０日</item>
+    </string-array>
+    <string-array name="bori_list">
+        <item>＋３σ以上</item>
+        <item>＋２σ以上</item>
+        <item>＋１σ以上</item>
+        <item>－１σ以下</item>
+        <item>－２σ以下</item>
+        <item>－３σ以下</item>
+    </string-array>
+
+    <string name="RSI_a">ＲＳＩ　設定画面</string>
+    <string name="RSI_e">現在株価（２０分遅れ）から算出したＲＳＩが</string>
+    <string name="RSI_f">で、シグナル「有」判定</string>
+
+    <string-array name="RSI_day">
+        <item>９日</item>
+        <item>１１日</item>
+        <item>１４日</item>
+    </string-array>
+    <string-array name="RSI_list">
+        <item>８０以上</item>
+        <item>７５以上</item>
+        <item>２５以下</item>
+        <item>２０以下</item>
+    </string-array>
+
+    <string name="bt_can">キャンセル</string>
+    <string name="bt_set">登録</string>
+    <string name="conf_a">この設定は保存されません。\nよろしいですか？</string>
+    <string name="conf_b">はい</string>
+    <string name="conf_c">いいえ</string>
+    <string name="title_activity_boriban">ボリンジャーバンド設定画面</string>
+    <string name="bt_set2">設定</string>
     
+    <string name="line_l">＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/＿/</string>
+    <string name="line_m">┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌┌</string>
+    <string name="line_s">///////////////////////////////////////////</string>
+    
+    <string name="title_activity_rsi">ＲＳＩ設定画面</string>
+
 </resources>
