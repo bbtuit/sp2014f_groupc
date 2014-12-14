@@ -33,136 +33,145 @@
 		
 	</LinearLayout>
 		
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/tx1" />
- 	
-    
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-	 	<Spinner
-	 	    android:layout_height="wrap_content"
-	 	    android:layout_width="wrap_content"
-	 	    android:layout_marginLeft="5dp"  
-	 	    android:entries="@array/sect_list" />
-	 	
-		<EditText
-			 android:layout_width="wrap_content"
-			 android:layout_height="wrap_content"
-			 android:id="@+id/code" 
-			 android:hint="@string/sect_c"
-			 android:textSize="15sp"
-             android:layout_alignParentRight="true"			 
-			 android:inputType="number"/>
-	 	
-    </RelativeLayout>
-    
-	<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/sect_d" />
- 	
-    <Button
-        android:id="@+id/sect_e"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:text="@string/sect_e" />
-
-    <Button
-        android:id="@+id/sect_f"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:textSize="15sp"
-        android:text="@string/sect_f" />
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/sect_g" /> 
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-		
-		<TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textSize="15sp"
-			android:layout_alignParentRight="true"
-	        android:text="@string/sect_j" />
-	</RelativeLayout>
-           
-    <RelativeLayout
-    	android:orientation="horizontal"
-    	android:layout_height="wrap_content"
-    	android:layout_width="match_parent">
-		<TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textSize="15sp"
-			android:layout_marginLeft="15dp"
-	        android:text="@string/sect_h" />
-	    <Switch
-	 	    android:layout_width="wrap_content"
-	 	    android:layout_height="wrap_content"
-	 	    android:layout_alignParentRight="true"
-	 	    android:layout_centerVertical="true"
-	 	    android:textOff="OFF"
-	 	    android:textOn="ON" />
-	</RelativeLayout>
-	
-    <RelativeLayout
-    	android:orientation="horizontal"
-    	android:layout_height="wrap_content"
-    	android:layout_width="match_parent">
-		<TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textSize="15sp"
-			android:layout_marginLeft="15dp"
-	        android:text="@string/sect_i" />
-	    <Switch
-	 	    android:layout_width="wrap_content"
-	 	    android:layout_height="wrap_content"
-	 	    android:layout_alignParentRight="true"
-	 	    android:layout_centerVertical="true"
-	 	    android:textOff="OFF"
-	 	    android:textOn="ON" />
-	</RelativeLayout>
-	
-	<LinearLayout
-	    android:orientation="horizontal" 
-	    android:layout_height="wrap_content" 
-	    android:layout_width="wrap_content" 
-	    android:layout_gravity="center_horizontal" 
-	    android:layout_marginTop="10dp">
-		<Button 
-		    android:layout_height="wrap_content" 
-		    android:layout_width="120dp" 
-		    android:text="@string/bt_can" 
-		    android:id="@+id/bt_can"/>
-		<Button 
-		    android:layout_height="wrap_content" 
-		    android:layout_width="120dp" 
-		    android:text="@string/bt_set" 
-		    android:id="@+id/bt_set"/>     
-	        
+        android:layout_height="match_parent">
         
-    </LinearLayout>
+	   	<LinearLayout
+	   	    android:orientation="vertical"
+	   	    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:text="@string/tx1" />
+		 	
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		
+			 	<Spinner
+			 	    android:layout_height="wrap_content"
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_marginLeft="5dp"  
+			 	    android:entries="@array/sect_list" />
+			 	
+				<EditText
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:id="@+id/code" 
+					 android:hint="@string/sect_c"
+					 android:textSize="15sp"
+		             android:layout_alignParentRight="true"			 
+					 android:inputType="number"/>
+			 	
+		    </RelativeLayout>
+		    
+			<TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:text="@string/sect_d" />
+		 	
+		    <Button
+		        android:id="@+id/sect_e"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:textSize="15sp"
+		        android:text="@string/sect_e" />
+		
+		    <Button
+		        android:id="@+id/sect_f"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:textSize="15sp"
+		        android:text="@string/sect_f" />
+		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:text="@string/sect_g" /> 
+		    
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+				<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+					android:layout_alignParentRight="true"
+			        android:text="@string/sect_j" />
+			</RelativeLayout>
+		           
+		    <RelativeLayout
+		    	android:orientation="horizontal"
+		    	android:layout_height="wrap_content"
+		    	android:layout_width="match_parent">
+				<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+					android:layout_marginLeft="15dp"
+			        android:text="@string/sect_h" />
+			    <Switch
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:layout_alignParentRight="true"
+			 	    android:layout_centerVertical="true"
+			 	    android:textOff="OFF"
+			 	    android:textOn="ON" />
+			</RelativeLayout>
+			
+		    <RelativeLayout
+		    	android:orientation="horizontal"
+		    	android:layout_height="wrap_content"
+		    	android:layout_width="match_parent">
+				<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+					android:layout_marginLeft="15dp"
+			        android:text="@string/sect_i" />
+			    <Switch
+			 	    android:layout_width="wrap_content"
+			 	    android:layout_height="wrap_content"
+			 	    android:layout_alignParentRight="true"
+			 	    android:layout_centerVertical="true"
+			 	    android:textOff="OFF"
+			 	    android:textOn="ON" />
+			</RelativeLayout>
+
 	
-    
+			<LinearLayout
+			    android:orientation="horizontal" 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content" 
+			    android:layout_gravity="center_horizontal" 
+			    android:layout_marginTop="10dp">
+				<Button 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="120dp" 
+				    android:text="@string/bt_can" 
+				    android:id="@+id/bt_can"/>
+				<Button 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="120dp" 
+				    android:text="@string/bt_set" 
+				    android:id="@+id/bt_set"/>     
+			        
+		        
+		    </LinearLayout>
+			
+		</LinearLayout>
+	</ScrollView>    
 
 </LinearLayout>

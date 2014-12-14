@@ -31,16 +31,18 @@
 		
 	</LinearLayout>
 	
+	<!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:text="@string/line_l" />
+     -->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:text="@string/bori_a" />
     
     <TextView
@@ -49,96 +51,106 @@
         android:textSize="15sp"
         android:text="@string/line_l" />    
         
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/line_s" />      
- 	
-	<LinearLayout
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	    android:layout_marginLeft="15dp">
-	    
-		<TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textSize="15sp"
-	        android:text="@string/bori_b" />
-	 	
-		
-	 	<Spinner
-		    android:layout_height="wrap_content"
-		    android:layout_width="wrap_content"
-		    android:layout_marginLeft="15dp"  
-		    android:entries="@array/bori_day" />
-	 	
-	</LinearLayout>	 	
-	
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/line_s" />  
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         
-	<LinearLayout
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	    android:layout_marginLeft="15dp">
-	 	
-		<TextView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:textSize="15sp"
-	        android:text="@string/bori_d" />
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-		    android:layout_marginLeft="15dp"  
-			android:textSize="15sp"
-			android:text="@string/bori_e" />
-	 	<Spinner
-		    android:layout_height="wrap_content"
-		    android:layout_width="wrap_content"
-		    android:layout_marginLeft="15dp"  
-		    android:entries="@array/bori_list" /> 	
-		<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginLeft="15dp" 
-			android:textSize="15sp"
-			android:text="@string/bori_f" />	
+	   	<LinearLayout
+	   	    android:orientation="vertical"
+	   	    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">       
+        
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:text="@string/line_s" />      
+		 	
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_marginLeft="15dp">
+			    
+				<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+			        android:text="@string/bori_b" />
+			 	
+				
+			 	<Spinner
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"
+				    android:layout_marginLeft="15dp"  
+				    android:entries="@array/bori_day" />
+			 	
+			</LinearLayout>	 	
 			
-	</LinearLayout>	
-	
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="@string/line_s" />  	
-		
-	<LinearLayout
-	    android:orientation="horizontal" 
-	    android:layout_height="wrap_content" 
-	    android:layout_width="wrap_content" 
-	    android:layout_gravity="center_horizontal" 
-	    android:layout_marginTop="10dp">
-		<Button 
-		    android:layout_height="wrap_content" 
-		    android:layout_width="120dp" 
-		    android:text="@string/bt_can" 
-		    android:id="@+id/bt_can"/>
-		<Button 
-		    android:layout_height="wrap_content" 
-		    android:layout_width="120dp" 
-		    android:text="@string/bt_set2" 
-		    android:id="@+id/bt_set2"/>     
-	        
-        
-    </LinearLayout>
-	
-    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:text="@string/line_s" />  
+		        
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_marginLeft="15dp">
+			 	
+				<TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="15sp"
+			        android:text="@string/bori_d" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+				    android:layout_marginLeft="15dp"  
+					android:textSize="15sp"
+					android:text="@string/bori_e" />
+			 	<Spinner
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"
+				    android:layout_marginLeft="15dp"  
+				    android:entries="@array/bori_list" /> 	
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="15dp" 
+					android:textSize="15sp"
+					android:text="@string/bori_f" />	
+					
+			</LinearLayout>	
+			
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"
+		        android:text="@string/line_s" />  	
+				
+			<LinearLayout
+			    android:orientation="horizontal" 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content" 
+			    android:layout_gravity="center_horizontal" 
+			    android:layout_marginTop="10dp">
+				<Button 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="120dp" 
+				    android:text="@string/bt_can" 
+				    android:id="@+id/bt_can"/>
+				<Button 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="120dp" 
+				    android:text="@string/bt_set2" 
+				    android:id="@+id/bt_set2"/>     
+			        
+		        
+		    </LinearLayout>
+			
+	    </LinearLayout>
+    </ScrollView>    
 
 </LinearLayout>
