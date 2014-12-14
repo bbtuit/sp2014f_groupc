@@ -22,11 +22,12 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="15sp"
-	        android:text="@string/button1" />
+	        android:id="@+id/No" />
+		
 		<EditText
 			 android:layout_width="wrap_content"
 			 android:layout_height="wrap_content"
-			 android:id="@+id/alart" 
+			 android:id="@+id/alert" 
 			 android:hint="@string/hint_name"
 			 android:textSize="15sp"
 			 android:inputType="text"/>

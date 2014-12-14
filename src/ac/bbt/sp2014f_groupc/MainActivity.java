@@ -9,11 +9,9 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 
 
@@ -103,8 +101,17 @@ public class MainActivity extends Activity {
      	class ButtonClickListener implements OnClickListener {
      		// onClickメソッド(ボタンクリック時イベントハンドラ)
      		public void onClick(View v) {
+
+     			//タグの取得
+     			String tag = (String)v.getTag();
+     			
      			//　インテントの生成（呼び出すクラスの指定）
      			Intent intent = new Intent(getActivity(),SecondActivity.class);
+     			
+     			tag = tag.replaceAll("btn", "");
+     			
+     			intent.putExtra("alertNo", tag);
+     			
      			startActivity(intent);
      			
      		}
