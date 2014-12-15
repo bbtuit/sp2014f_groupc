@@ -20,28 +20,30 @@ public class SecondActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+
+
+		
 		// 現在のintentを取得する
 		Intent intent = getIntent();
-		
 		// intentから指定のキーの文字列を取得する
 		String alertNo = intent.getStringExtra("alertNo");		
-		
         // 表示するテキストの設定
         String txt = "アラート" + alertNo;
-        
 		// トーストで確認（インテントで取得した文字列）
 		Toast.makeText(this, txt, Toast.LENGTH_LONG).show();  
-        
 		
-		setContentView(R.layout.activity_second);
 		
-        // IDからTextViewインスタンスを取得
-//        TextView tvalert = (TextView) findViewById(R.id.No);        
+
+		
+		setContentView(R.layout.activity_second);		
+		
+        // IDからTextViewインスタンスを取得		
+//		TextView tvalert = (TextView)findViewById(R.id.No);
 //        tvalert.setText(txt);
         
         // ActivityにViewを設定
 //        setContentView(tvalert);		
-		
+
 		
 		if (savedInstanceState == null) {
 			getFragmentManager().beginTransaction()
