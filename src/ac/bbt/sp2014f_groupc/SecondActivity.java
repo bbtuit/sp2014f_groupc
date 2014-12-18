@@ -1,9 +1,13 @@
 package ac.bbt.sp2014f_groupc;
 
-import android.app.Activity;
+import java.util.Calendar;
+
+import android.app.AlarmManager;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,10 +16,13 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.TimePicker;
 
-public class SecondActivity extends Activity {
+public class SecondActivity extends FragmentActivity {
 
+
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -101,8 +108,12 @@ public class SecondActivity extends Activity {
      	class ButtonClickListener implements OnClickListener {
      		// onClickメソッド(ボタンクリック時イベントハンドラ)
      		public void onClick(View v) {
+     			
+     			
      			//タグの取得
  				String tag = (String)v.getTag();
+ 				
+ 				
      			//ボリンジャーバンド設定ボタンが押された場合
      			if(tag.equals("bt_boriban")){
 	     			//　インテントの生成（呼び出すクラスの指定）

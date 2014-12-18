@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Switch;
 
 
 
@@ -58,7 +60,7 @@ public class MainActivity extends Activity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment extends Fragment{
 
         public PlaceholderFragment() {
         }
@@ -93,6 +95,8 @@ public class MainActivity extends Activity {
             Button button5 = (Button)rootView.findViewById(R.id.btn_5);
             button5.setTag("btn5");
             button5.setOnClickListener(new ButtonClickListener());
+            
+            
             
             return rootView;    
         }
