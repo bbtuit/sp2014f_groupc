@@ -30,19 +30,19 @@ public class SecondActivity extends Activity {
         // 表示するテキストの設定
         String txt = "アラート" + alertNo;
 		// トーストで確認（インテントで取得した文字列）
-		Toast.makeText(this, txt, Toast.LENGTH_LONG).show();  
+		//Toast.makeText(this, txt, Toast.LENGTH_LONG).show();  
 		
 		
 
 		
-		setContentView(R.layout.activity_second);		
+		setContentView(R.layout.fragment_second);	//　	ぬるぽ解消！！　(R.layout.Activity_second);　→　(R.layout.fragment_second);
 		
         // IDからTextViewインスタンスを取得		
-//		TextView tvalert = (TextView)findViewById(R.id.No);
-//        tvalert.setText(txt);
+		TextView tvalert = (TextView)findViewById(R.id.No);	//ぬるぽ解消！！
+        tvalert.setText(txt);	//ぬるぽ解消！！
         
         // ActivityにViewを設定
-//        setContentView(tvalert);		
+//        setContentView(tvalert);	//　ぬるぽ解消！！　　ここは、そもそも不要だった！	
 
 		
 		if (savedInstanceState == null) {
