@@ -133,18 +133,18 @@ public class MainActivity extends Activity {
      		}
      	}
      	
-     	class OnCheckedChangeListener implements CompoundButton.OnCheckedChangeListener {
-     		private Activity rootView;
+//     	class OnCheckedChangeListener implements CompoundButton.OnCheckedChangeListener {
+//     		private Activity rootView;
 			// onClickメソッド(ボタンクリック時イベントハンドラ)
      	   	
             // switchウィジットを取得
-            Switch mSwitch = (Switch)rootView.findViewById(R.id.switch1);
+//            Switch mSwitch = (Switch)rootView.findViewById(R.id.switch1);
 	        //　トグル操作のリスナーを登録
-	        mSwitch.setOnCheckedChangeListener(this);
+//	        mSwitch.setOnCheckedChangeListener(this);
      	
      	}
 
-    }
+//    }
     
 	//kokokara
  	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

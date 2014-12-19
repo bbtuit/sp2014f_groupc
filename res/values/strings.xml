@@ -12,7 +12,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_second">個別アラート設定トップ</string>
     <string name="hint_name">任意のアラート名称を付けてください</string>
-    <string name="tx1">１.日経平均　若しくは\n　　銘柄コードを入力してください</string>
+    <string name="tx1">１.日経平均　若しくは\n　　銘柄コードを入力してください。\n　　（銘柄コード部は開発中です。m(_ _)m。）</string>
 
     <string-array name="sect_list">
         <item>日経平均</item>

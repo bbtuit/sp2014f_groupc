@@ -31,6 +31,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textSize="25sp"
+			android:id="@+id/alert3"
 			android:text="@string/hint_name"/>
 		
 	</LinearLayout>
@@ -86,8 +87,9 @@
 			 	<Spinner
 				    android:layout_height="wrap_content"
 				    android:layout_width="wrap_content"
-				    android:layout_marginLeft="15dp"  
-				    android:entries="@array/RSI_day" />
+				    android:layout_marginLeft="15dp"
+				    android:entries="@array/RSI_day"
+				    android:id="@+id/RSI_day" />
 			 	
 			</LinearLayout>	 	
 			
@@ -118,7 +120,8 @@
 				    android:layout_height="wrap_content"
 				    android:layout_width="wrap_content"
 				    android:layout_marginLeft="15dp"  
-				    android:entries="@array/RSI_list" /> 	
+				    android:entries="@array/RSI_list"
+				    android:id="@+id/RSI_list" /> 	
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -144,12 +147,12 @@
 				    android:layout_height="wrap_content" 
 				    android:layout_width="120dp" 
 				    android:text="@string/bt_can" 
-				    android:id="@+id/bt_can"/>
+				    android:id="@+id/bt_can3"/>
 				<Button 
 				    android:layout_height="wrap_content" 
 				    android:layout_width="120dp" 
 				    android:text="@string/bt_set2" 
-				    android:id="@+id/bt_set2"/>     
+				    android:id="@+id/bt_set3"/>     
 			        
 		        
 		    </LinearLayout>

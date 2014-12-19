@@ -22,7 +22,8 @@
 	 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clickable="true" >
         
 	   	<LinearLayout
 	   	    android:orientation="vertical"
@@ -40,7 +41,6 @@
 			        android:text="@string/button1"
 			        android:id="@+id/btn_1"/>
 			        
-		
 			 	<Switch
 			 	    android:id="@+id/switch1"
 			 	    android:layout_width="wrap_content"
@@ -57,17 +57,22 @@
 		    	android:orientation="horizontal"
 		    	android:layout_height="wrap_content"
 		    	android:layout_width="match_parent">
-		 		<Button 
-		        	android:layout_height="wrap_content" 
-		       		android:layout_width="wrap_content" 
-		        	android:text="@string/button2"
-		        	android:id="@+id/btn_2"/>
+
+		 		<Button
+		 		    android:id="@+id/btn_2"
+		 		    android:layout_width="wrap_content"
+		 		    android:layout_height="wrap_content"
+		 		    android:enabled="false"
+		 		    android:text="@string/button2"
+		 		    android:visibility="visible" />
+
 		 		<Switch
 		 		    android:id="@+id/switch2"
 		 		    android:layout_width="wrap_content"
 		 		    android:layout_height="wrap_content"
 		 		    android:layout_alignParentRight="true"
 		 		    android:layout_centerVertical="true"
+		 		    android:enabled="false"
 		 		    android:textOff="OFF"
 		 		    android:textOn="ON" />
 		
@@ -79,18 +84,22 @@
 		        android:orientation="horizontal" >
 		
 		        <Button
+		            android:id="@+id/btn_3"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:text="@string/button3"
-		        	android:id="@+id/btn_3"/>
+		            android:enabled="false"
+		            android:text="@string/button3" />
+
 		        <Switch
 		            android:id="@+id/switch3"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
+		            android:enabled="false"
 		            android:textOff="OFF"
 		            android:textOn="ON" />
+
 		    </RelativeLayout>
 		        	
 		    <RelativeLayout
@@ -99,18 +108,22 @@
 		        android:orientation="horizontal" >
 		
 		        <Button
+		            android:id="@+id/btn_4"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:text="@string/button4" 
-		        	android:id="@+id/btn_4"/>            
+		            android:enabled="false"
+		            android:text="@string/button4" />
+            
 		        <Switch
 		            android:id="@+id/switch4"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-			 	    android:layout_centerVertical="true"
 		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:enabled="false"
 		            android:textOff="OFF"
 		            android:textOn="ON" />
+
 		    </RelativeLayout>
 		 	
 		    <RelativeLayout
@@ -119,19 +132,22 @@
 		        android:orientation="horizontal" >
 		
 		        <Button
+		            android:id="@+id/btn_5"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:text="@string/button5" 
-					android:id="@+id/btn_5"/>
+		            android:enabled="false"
+		            android:text="@string/button5" />
 		
 		        <Switch
 		            android:id="@+id/switch5"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-			 	    android:layout_centerVertical="true"
 		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:enabled="false"
 		            android:textOff="OFF"
 		            android:textOn="ON" />
+
 		    </RelativeLayout>
 	    </LinearLayout>
     </ScrollView>

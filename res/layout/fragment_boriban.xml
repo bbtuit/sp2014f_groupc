@@ -13,25 +13,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world"/>
     
 	<LinearLayout
 	    android:orientation="horizontal" 
 	    android:layout_height="wrap_content" 
 	    android:layout_width="wrap_content" 
 	    android:layout_gravity="left"
-	    android:layout_marginTop="10dp">
+	    android:layout_marginTop="10dp" >
 	
 		<TextView
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:textSize="15sp"
 	        android:text="@string/button1" />
+	        "
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textSize="25sp"
-			android:text="@string/hint_name"/>
+			android:id="@+id/alert2"
+			android:text="@string/hint_name" />
 		
 	</LinearLayout>
 	
@@ -86,8 +88,9 @@
 			 	<Spinner
 				    android:layout_height="wrap_content"
 				    android:layout_width="wrap_content"
-				    android:layout_marginLeft="15dp"  
-				    android:entries="@array/bori_day" />
+				    android:layout_marginLeft="15dp"
+				    android:entries="@array/bori_day"
+				    android:id="@+id/bori_day"/>
 			 	
 			</LinearLayout>	 	
 			
@@ -117,8 +120,9 @@
 			 	<Spinner
 				    android:layout_height="wrap_content"
 				    android:layout_width="wrap_content"
-				    android:layout_marginLeft="15dp"  
-				    android:entries="@array/bori_list" /> 	
+				    android:layout_marginLeft="15dp" 
+				    android:entries="@array/bori_list"
+				    android:id="@+id/bori_rist"/> 	
 				<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -144,7 +148,7 @@
 				    android:layout_height="wrap_content" 
 				    android:layout_width="120dp" 
 				    android:text="@string/bt_can" 
-				    android:id="@+id/bt_can"/>
+				    android:id="@+id/bt_can2"/>
 				<Button 
 				    android:layout_height="wrap_content" 
 				    android:layout_width="120dp" 

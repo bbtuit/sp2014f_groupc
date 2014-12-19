@@ -72,7 +72,8 @@
 					 android:id="@+id/code" 
 					 android:hint="@string/sect_c"
 					 android:textSize="15sp"
-		             android:layout_alignParentRight="true"			 
+		             android:layout_alignParentRight="true"	
+		             android:enabled="false"		 
 					 android:inputType="number"/>
 			 	
 		    </RelativeLayout>
@@ -133,6 +134,8 @@
 			 	    android:layout_height="wrap_content"
 			 	    android:layout_alignParentRight="true"
 			 	    android:layout_centerVertical="true"
+			 	    android:checked="true"
+			 	    android:enabled="false"
 			 	    android:textOff="OFF"
 			 	    android:textOn="ON" />
 			</RelativeLayout>
@@ -152,6 +155,8 @@
 			 	    android:layout_height="wrap_content"
 			 	    android:layout_alignParentRight="true"
 			 	    android:layout_centerVertical="true"
+			 	    android:checked="true"
+			 	    android:enabled="false"
 			 	    android:textOff="OFF"
 			 	    android:textOn="ON" />
 			</RelativeLayout>

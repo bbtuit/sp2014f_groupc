@@ -3,7 +3,7 @@ package ac.bbt.sp2014f_groupc;
 import android.app.IntentService;
 import android.content.Intent;
 import android.text.format.Time;
-import android.widget.Toast;
+import android.util.Log;
 
 public class DailyIntentService0920 extends IntentService {
 	
@@ -22,9 +22,9 @@ public class DailyIntentService0920 extends IntentService {
 			String d=String.valueOf(time.monthDay);	
 			String url = "http://info.finance.yahoo.co.jp/history/?code=998407.O&sy=" + yp + "&sm=" + m + "&sd=" + d + "&ey=" + y + "&em=" + m + "&ed=" + d + "&tm=d&p=1";
 
-//	    Log.d(TAG, url);
+			Log.d(TAG, url);
 			//トーストで確認（インテントで取得した文字列）
-			Toast.makeText(this, url, Toast.LENGTH_SHORT).show();  
+			//Toast.makeText(this, url, Toast.LENGTH_SHORT).show();  
 			
 			
 	  }
