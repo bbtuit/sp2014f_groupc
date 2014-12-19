@@ -2,7 +2,10 @@ package ac.bbt.sp2014f_groupc;
 
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.Fragment;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 
@@ -25,6 +28,10 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        
+        
+
+        
 
     //    public void onclick(view v)
         
@@ -60,8 +67,9 @@ public class MainActivity extends Activity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment{
+    public static class PlaceholderFragment extends Fragment {
 
+    	
         public PlaceholderFragment() {
         }
 
@@ -69,6 +77,8 @@ public class MainActivity extends Activity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            
 
             
             // アラート1ボタンのクリックリスナー定義
@@ -101,6 +111,8 @@ public class MainActivity extends Activity {
             return rootView;    
         }
         
+
+        
         // クリックリスナー定義
      	class ButtonClickListener implements OnClickListener {
      		// onClickメソッド(ボタンクリック時イベントハンドラ)
@@ -120,7 +132,60 @@ public class MainActivity extends Activity {
      			
      		}
      	}
-     
-        
+     	
+     	class OnCheckedChangeListener implements CompoundButton.OnCheckedChangeListener {
+     		private Activity rootView;
+			// onClickメソッド(ボタンクリック時イベントハンドラ)
+     	   	
+            // switchウィジットを取得
+            Switch mSwitch = (Switch)rootView.findViewById(R.id.switch1);
+	        //　トグル操作のリスナーを登録
+	        mSwitch.setOnCheckedChangeListener(this);
+     	
+     	}
+
     }
+    
+	//kokokara
+ 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+  	   if(isChecked == true){
+  	       // 9:20-15:20のに設定
+  		   scheduleService();
+  	   }else{
+  	       // ノーマルモードに設定
+  		   cancelService();
+  	   }
+  	}
+	public void scheduleService(){
+        //Log.d(TAG, "scheduleService()");
+        Context context = getBaseContext();
+        Intent intent = new Intent(context, DailyIntentService0920.class);
+        PendingIntent pendingIntent 
+          = PendingIntent.getService(
+            context, -1, intent, 
+            PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager 
+          = (AlarmManager)
+          context.getSystemService(ALARM_SERVICE);
+        alarmManager.setInexactRepeating(
+          AlarmManager.RTC, 
+          System.currentTimeMillis(),
+          5000, pendingIntent);
+	}
+  
+	public void cancelService(){
+        Context context = getBaseContext();
+        Intent intent = new Intent(context, DailyIntentService0920.class);
+        PendingIntent pendingIntent 
+          = PendingIntent.getService(
+            context, -1, intent, 
+            PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager 
+          = (AlarmManager)
+          context.getSystemService(ALARM_SERVICE);
+        alarmManager.cancel(pendingIntent);
+      
+    }
+	// kokomade
 }

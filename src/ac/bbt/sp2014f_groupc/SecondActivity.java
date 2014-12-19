@@ -42,11 +42,11 @@ public class SecondActivity extends FragmentActivity {
 		
 
 		
-		setContentView(R.layout.fragment_second);	//　	ぬるぽ解消！！　(R.layout.Activity_second);　→　(R.layout.fragment_second);
+		setContentView(R.layout.activity_second);	//　	ぬるぽ解消！！　(R.layout.Activity_second);　→　(R.layout.fragment_second);
 		
         // IDからTextViewインスタンスを取得		
-		TextView tvalert = (TextView)findViewById(R.id.No);	//ぬるぽ解消！！
-        tvalert.setText(txt);	//ぬるぽ解消！！
+//		TextView tvalert = (TextView)findViewById(R.id.No);	//ぬるぽ解消！！
+//        tvalert.setText(txt);	//ぬるぽ解消！！
         
         // ActivityにViewを設定
 //        setContentView(tvalert);	//　ぬるぽ解消！！　　ここは、そもそも不要だった！	

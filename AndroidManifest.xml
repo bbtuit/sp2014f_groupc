@@ -34,6 +34,7 @@
             android:name=".RSIActivity"
             android:label="@string/title_activity_rsi" >
         </activity>
-    </application>
+        <service android:name="ac.bbt.sp2014f_groupc.DailyIntentService0920"/>
+	</application>
 
 </manifest>
