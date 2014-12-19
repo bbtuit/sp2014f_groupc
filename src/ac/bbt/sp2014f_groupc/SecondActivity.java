@@ -1,11 +1,9 @@
 package ac.bbt.sp2014f_groupc;
 
-import java.util.Calendar;
-
-import android.app.AlarmManager;
 import android.app.Fragment;
+import android.content.ContentValues;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
@@ -15,8 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.TimePicker;
+import android.widget.EditText;
 
 public class SecondActivity extends FragmentActivity {
 
@@ -81,7 +78,14 @@ public class SecondActivity extends FragmentActivity {
 	 * A placeholder fragment containing a simple view.
 	 */
 	public static class PlaceholderFragment extends Fragment {
+		
+		//ファイル名
+		//private static final String FILE_NAME = "Alert_settings";
 
+		CreateDataBaseHelper helper = null;
+		SQLiteDatabase db = null;
+		
+		
 		public PlaceholderFragment() {
 		}
 
@@ -99,7 +103,22 @@ public class SecondActivity extends FragmentActivity {
             // ＲＳＩ設定ボタンのクリックリスナー定義
             Button bt_RSI = (Button)rootView.findViewById(R.id.sect_f);
             bt_RSI.setTag("bt_RSI");
-            bt_RSI.setOnClickListener(new ButtonClickListener());			
+            bt_RSI.setOnClickListener(new ButtonClickListener());
+            
+            // キャンセルボタンのクリックリスナー定義
+            Button bt_can = (Button)rootView.findViewById(R.id.bt_can);
+            bt_can.setTag("bt_can");
+            bt_can.setOnClickListener(new ButtonClickListener());		
+            
+            // ＲＳＩ設定ボタンのクリックリスナー定義
+            Button bt_set = (Button)rootView.findViewById(R.id.bt_set);
+            bt_set.setTag("bt_set");
+            bt_set.setOnClickListener(new ButtonClickListener());		            
+            
+            //DB作成
+            helper = new CreateDataBaseHelper(rootView.getContext());
+            
+            
 			
 			return rootView;
 		}
@@ -113,19 +132,57 @@ public class SecondActivity extends FragmentActivity {
      			//タグの取得
  				String tag = (String)v.getTag();
  				
- 				
-     			//ボリンジャーバンド設定ボタンが押された場合
-     			if(tag.equals("bt_boriban")){
-	     			//　インテントの生成（呼び出すクラスの指定）
-	     			Intent intent = new Intent(getActivity(),BoribanActivity.class);
-	     			startActivity(intent);
-     			}
-     			
-     			//ＲＳＩ設定ボタンが押された場合
-     			if(tag.equals("bt_RSI")){
-	     			//　インテントの生成（呼び出すクラスの指定）
-	     			Intent intent = new Intent(getActivity(),RSIActivity.class);
-	     			startActivity(intent);
+
+		     			
+		     		//キャンセルボタンが押された場合
+		     		if(tag.equals("bt_can")){
+		     			getActivity().finish();
+		     			
+		     		//登録ボタンが押された場合
+		     		}else{
+		     			
+		     			//入力情報取得
+		     			int alertNo = 1;
+		     			EditText name=(EditText)getActivity().findViewById(R.id.alert);
+		     			String Mcode="998407.O";
+		     			
+		     			//該当DBオブジェクト取得
+		     			SQLiteDatabase db = helper.getReadableDatabase();
+		     			try{
+		     				//トランザクション制御開始
+		     				db.beginTransaction();
+		     				
+		     				//登録データ設定
+		     				ContentValues val = new ContentValues();
+		     				val.put("アラートNO", alertNo);
+		     				val.put("名称", name.toString());
+		     				val.put("銘柄コード", Mcode);
+		     				
+		     				//データ登録
+		     				db.insert("アラート設定テーブル", null, val);
+		     				//コミット
+		     				db.setTransactionSuccessful();
+		     				//トランザクション制御終了
+		     				db.endTransaction();		     				
+		     			}catch(Exception e){
+		     				
+		     			}
+		     			
+						
+					}
+	 				
+     				//ボリンジャーバンド設定ボタンが押された場合
+	     			if(tag.equals("bt_boriban")){
+		     			//　インテントの生成（呼び出すクラスの指定）
+		     			Intent intent = new Intent(getActivity(),BoribanActivity.class);
+		     			startActivity(intent);
+	     			}
+	     			
+	     			//ＲＳＩ設定ボタンが押された場合
+	     			if(tag.equals("bt_RSI")){
+		     			//　インテントの生成（呼び出すクラスの指定）
+		     			Intent intent = new Intent(getActivity(),RSIActivity.class);
+		     			startActivity(intent);
      			}     			
      			
      		}

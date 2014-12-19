@@ -1,15 +1,20 @@
 package ac.bbt.sp2014f_groupc;
 
+import ac.bbt.sp2014f_groupc.MainActivity.PlaceholderFragment.ButtonClickListener;
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.Button;
+
+
+
+
 
 public class BoribanActivity extends Activity {
 
@@ -46,7 +51,10 @@ public class BoribanActivity extends Activity {
 	 * A placeholder fragment containing a simple view.
 	 */
 	public static class PlaceholderFragment extends Fragment {
-
+		
+		CreateDataBaseHelper helper = null;
+		SQLiteDatabase db = null;
+		
 		public PlaceholderFragment() {
 		}
 
@@ -55,6 +63,20 @@ public class BoribanActivity extends Activity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_boriban,
 					container, false);
+			
+            // キャンセルボタンのクリックリスナー定義
+            Button bt_can2 = (Button)rootView.findViewById(R.id.bt_can2);
+            bt_can2.setTag("bt_can2");
+            bt_can2.setOnClickListener(new ButtonClickListener());
+						
+            //設定ボタンのクリックリスナー定義
+            Button bt_set2 = (Button)rootView.findViewById(R.id.bt_set2);
+            bt_set2.setTag("bt_set2");
+            bt_set2.setOnClickListener(new ButtonClickListener());           
+            
+            //DB作成
+            helper = new CreateDataBaseHelper(rootView.getContext());
+                    
 			return rootView;
 		}
 	}

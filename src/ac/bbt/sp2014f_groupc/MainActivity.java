@@ -114,7 +114,7 @@ public class MainActivity extends Activity {
 
         
         // クリックリスナー定義
-     	class ButtonClickListener implements OnClickListener {
+        class ButtonClickListener implements OnClickListener {
      		// onClickメソッド(ボタンクリック時イベントハンドラ)
      		public void onClick(View v) {
 
